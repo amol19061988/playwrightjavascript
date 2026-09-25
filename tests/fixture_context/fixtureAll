@@ -1,0 +1,17 @@
+import { test, expect } from '@playwright/test';
+
+
+test('Verify Context', async function ({ page, context,browser,response }) {
+
+  await page.goto("https://testautomationpractice.blogspot.com/")
+
+  const page2 = await context.newPage();
+  page2.goto("https://www.google.com/");
+
+ await page2.waitForTimeout(5000);
+ //browser.close();
+ 
+ 
+});
+
+
